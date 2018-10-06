@@ -42,7 +42,8 @@ bool winning(string s)
 // diagonal
     if((s[0]!='.' && s[0]==s[4] && s[4]==s[8]) ||
         (s[2]!='.' && s[2]==s[4] && s[4]==s[6]) ) return 1;
-
+return 0;
+}
 int main()
 {
 
