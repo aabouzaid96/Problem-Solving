@@ -1,3 +1,14 @@
 
 1- Invert Binary Tree
-2- 
+2- Delete Node in a Linked List
+3- Two City Scheduling
+4- Reverse String
+5- Random Pick with Weight
+6- Queue Reconstruction by Height
+7-
+8-
+9-
+10-
+11-
+12-
+
