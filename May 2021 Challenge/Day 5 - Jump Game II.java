@@ -1,5 +1,7 @@
 // my solution using BFS Algorithm
 // Sol 1
+// compexity O(n+m)  // n length if nums   m maximum number of jumps     
+
 public int jump(int[] nums) {
         Queue<Jump> Q=new LinkedList<>();
         int vis[]=new int[nums.length];
@@ -38,3 +40,18 @@ class Jump{
         this.res=res;
     }
 }
+
+-------------------------------------
+   // Sol 2  more optimization
+   // compexity O(n*m)  // n length if nums   m maximum number of jumps     
+public static int jump(int[] nums) {
+        int res[]=new int [nums.length];
+        Arrays.fill(res,Integer.MAX_VALUE);
+        res[0]=0;
+    for(int i=0;i<nums.length;i++){
+        for(int step=1;step<=nums[i] && i+step < nums.length;step++){
+            res[i+step]=Math.min(res[i+step],res[i]+1);
+        }
+    }
+    return res[nums.length-1];
+    }
