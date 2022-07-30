@@ -6,6 +6,7 @@ Output: 8
 
 
 // Solution
+// using 2 pointer
 private static int flipBitToWin(int number){
         String binaryNumber = Integer.toString(number,2);
         int l=0,r=0, maxLength=0, curLength=0;
