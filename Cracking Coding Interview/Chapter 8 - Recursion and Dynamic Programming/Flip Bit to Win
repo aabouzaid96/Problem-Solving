@@ -1,0 +1,36 @@
+Flip Bit to Win: You have an integer and you can flip exactly one bit from a 0 to a 1. Write code to
+find the length of the longest sequence of ls you could create.
+EXAMPLE
+Input: 1775
+Output: 8
+
+
+// Solution
+private static int flipBitToWin(int number){
+        String binaryNumber = Integer.toString(number,2);
+        int l=0,r=0, maxLength=0, curLength=0;
+        boolean flipped =false;
+        while(l <= r && r < binaryNumber.length()){
+            char chL = binaryNumber.charAt(l);
+            char chR = binaryNumber.charAt(r);
+            if(l == r){
+                if(chL =='1' || (chL =='0' && !flipped)){
+                    r++; curLength++;
+                }
+                else { l++; r++; }
+            }else{
+                if(chR =='0' && flipped){
+                    if(chL == '0') flipped = false;
+                    l++;
+                    curLength--;
+                }else if(chR == '1' || (chR =='0' && !flipped)){
+                    if(chR == '0') flipped = true;
+                    r++;
+                    curLength++;
+                }
+            }
+            maxLength= Math.max(maxLength, curLength);
+        }
+        return maxLength;
+    }
+}
