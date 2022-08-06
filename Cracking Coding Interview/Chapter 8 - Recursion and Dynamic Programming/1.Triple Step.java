@@ -2,8 +2,8 @@ Problem 8.1: Triple Step: A child is running up a staircase with n steps and can
 steps at a time. Implement a method to count how many possible ways the child can run up the
 stairs.
 
-Same: 1137. N-th Tribonacci Number
-https://leetcode.com/problems/n-th-tribonacci-number/
+Same on LeetCode: 1137. N-th Tribonacci Number
+[https://leetcode.com/problems/n-th-tribonacci-number]
 
 class Solution {
     public int tribonacci(int n) {
