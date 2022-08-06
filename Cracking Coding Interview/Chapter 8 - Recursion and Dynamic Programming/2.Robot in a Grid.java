@@ -4,7 +4,8 @@ The robot can only move in two directions, right and down, but certain cells are
 the robot cannot step on them. Design an algorithm to find a path for the robot from the top left to
 the bottom right.
 
-the same on LeetCode [https://leetcode.com/problems/unique-paths-ii]
+Same on LeetCode: 63. Unique Paths II
+[https://leetcode.com/problems/unique-paths-ii]
 
 class Solution {    
     private int memo[][];
