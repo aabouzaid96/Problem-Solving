@@ -2,7 +2,7 @@ Problem : 929. Unique Email Addresses [https://leetcode.com/problems/unique-emai
 
 Solution 1
 -----------------------
-```
+
 class Solution {
     public int numUniqueEmails(String[] emails) {
         Set<String> results = new HashSet<>();
@@ -29,11 +29,10 @@ class Solution {
             return cleanEmail.toString();
     }
 }
-```
+
 
 Solution 2
 --------------------------
-```
 class Solution {
     public int numUniqueEmails(String[] emails) {
         Set<String> results = new HashSet<>();
@@ -49,4 +48,4 @@ class Solution {
         return results.size();
     }
 }
-```
+
