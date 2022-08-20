@@ -1,6 +1,6 @@
 //Power Set: Write a method to return all subsets of a set.
 
-//Solution 1 O(n^2) time, O(n) space
+//Solution 1 O(2^n) time, O(n) space
 
 class Solution {
     private List<List<Integer>> result;
@@ -14,7 +14,6 @@ class Solution {
 
         if(ind == nums.length){
             result.add(new ArrayList<>(subset));  
-            // why  result.add(subset); doesn't work ???
             return;
         }
         subset.add(nums[ind]);
@@ -22,12 +21,5 @@ class Solution {
         subset.remove(subset.size()-1);
         generateSubsets(ind+1, subset, nums);
       
-      
-      /**
-      // doesn't work, i should pass subset as "new ArrayList<>(subset)"  why ?
-        generateSubsets(ind+1, subset, nums);
-         subset.add(nums[ind]);
-        generateSubsets(ind+1, subset, nums);
-      **/
     }
 }
