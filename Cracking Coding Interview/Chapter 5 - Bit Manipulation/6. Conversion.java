@@ -23,3 +23,13 @@ public static int Conversion(int num1, int num2){
         }
         return ones;
     }
+
+// in less number of operation 
+private static int countNumberOfOnes2(int num){
+        int ones =0;
+        while (num != 0){
+            num &= num - 1;
+            ones ++;
+        }
+        return ones;
+    }
